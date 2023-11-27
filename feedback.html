@@ -1,0 +1,411 @@
+
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="" href="
+    <link rel=" preconnect"="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="<link" rel="preconnect">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style type="text/css" media="all">
+
+                    *{
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Poppins', sans-serif;
+                    }
+                    .header{
+                    min-height: 100vh;
+                    width:100%;
+                    background-image: url("https://wallup.net/wp-content/uploads/2018/09/25/633634-eggs-food-dishes-black_background.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    }
+
+                    nav{
+                      display: flex;
+                      padding: 1% 6%;
+                      justify-content: space-between;
+                      align-items: center;
+                      background-color: rgba(51,51,51,0.5);
+
+                    }
+                    nav p{
+                    color: transparent;
+                    }
+                    .nav-links{
+                      flex: 1;
+                      text-align: right;
+                    }
+
+                    .nav-links ul li{
+                      list-style: none;
+                      display: inline-block;
+                      padding: 8px 12px;
+                      position: relative;
+                    }
+                    .nav-links ul li a{
+                     color: white;
+                     text-decoration: none;
+                     font-size: 18px;
+                    }
+                    .nav-links ul li::after{
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background-color: white;
+                    display: block;
+                    margin: auto;
+                    transition: 0.5s;
+                    }
+                     .nav-links ul li:hover::after{
+                    width: 100%;
+                    }
+                    .text-box{
+                    width: 50%;
+                    color: #fff;
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: left;
+                    box-sizing: border-box;
+                    border: 1px transparent rgba(128,128,128);
+                    background-color: rgba(128,128,128,0.1);
+                    padding: 5px 5px;
+                    outline: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    }
+                   .for{
+                    width: 100%;
+                  padding: 25px 20px;
+                   text-align: center;
+                    }
+                  .text-box h1{
+                  color: #654321;
+                  font: 400 62px 'Ancient Greek', Helvetica, sans-serif;
+                  }
+                  input{
+                  width:80%;
+                  height: 50px;
+                  margin: 4px 0;
+                  border: 1px solid #181717;
+                  border-radius: 5px;
+                  background: #181717;
+                  padding: 0 15px;
+                  font-size: 20px;
+                  padding-right: 20px;
+                  }
+                  input:focus{
+                  background: white;
+                  }
+                   textarea:focus{
+                  background: white;
+                  }
+                  textarea{
+                  padding: 5px 15px;
+                  border: 1px;
+                  border-radius: 5px;
+                  background: #181717;
+                  font-size: 20px;
+                  width:80%;
+                  margin: 4px 0;
+                  }
+                  .btn{
+                  display: inline-block;
+                  text-decoration: none;
+                  border-radius: 3px;
+                  color: white;
+                  border: 1px solid  #654321;
+                  font-size: 15px;
+                  padding: 10px 0;
+                  background-color: #654321;
+                  width: 80%;
+                  position: relative;
+                  cursor: pointer;
+                  }
+                  .btn:hover{
+                  border: 1px solid #654321;
+                  background: #654321;
+                  transition: 1s;
+                  color: white;
+                   box-shadow: 0 0 10px 5px #ffd700;
+                  }
+                  nav .fa{
+                  display: none;
+                  }
+                  .popup{
+                    width: 300px;
+                    background: #fff;
+                    border-radius:6px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+                  text-align:center;
+                  padding: 0 30px 30px ;
+                  color: #333;
+                  visibility: hidden;
+                   transition: transform 0.5s, top 0.5s;
+
+
+                  }
+                  .open-popup
+                  {
+                     top: 50%;
+                    visibility: visible;
+                    transform: translate(-50%, -50%) scale(1);
+
+                  }
+                  .popup img {
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                  }
+                  .popup h2 {
+                    font-size: 38px;
+                    font-weight: 500;
+                    margin: 30px 0 10px;
+
+                  }
+      .popup button {
+        width: 300px;
+        margin-top:50px;
+        padding: 10px 0;
+        background: #6fd649;
+        color: #fff;
+        border: 0;
+        outline:none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+      }
+                input:focus {
+                outline-color: whitesmoke; 
+                }
+                  input:hover{
+                  background-color: whitesmoke;
+                  }
+
+                  textarea:focus{
+                    outline-color: whitesmoke;
+                  }
+                  textarea:hover{
+                    background-color: whitesmoke;
+                  }
+                  @media(max-width: 700px){
+                  .header{
+                    min-height: 100vh;
+                    width:100%;
+                    background-image: url("https://wallup.net/wp-content/uploads/2018/09/25/633634-eggs-food-dishes-black_background.jpg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    position: relative;
+                    }
+                      nav{
+      
+                      background-color: rgba(0,0,0);
+
+                    }
+                  .text-box{
+                    width:80%;
+                    color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: left;
+                    box-sizing: border-box;
+                    border: 1px transparent rgba(128,128,128);
+                    background-color: rgba(128,128,128,0.1);
+                    outline: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    }
+                    .textbox form h1{
+                    padding: 10px 0;
+                    }
+                  .text-box h1{
+                  color: #654321;
+                  font-family:'Ancient Greek', Helvetica, sans-serif;
+                  font-size: 20px;
+
+                  }
+                  .nav-links ul li{
+                  display: block;
+                  }
+                  .nav-links{
+                  position: fixed;
+                  z-index: 2;
+                  background: black;
+                  height: 100vh;
+                  width:200px;
+                  top: 0;
+                  right: -200px;
+                  text-align: left;
+                  transition: 1s;
+                  }
+                  .nav-links ul li a{
+                  font-size: 12px;
+                  }
+                   .btn{
+                  padding: 10px 16px;
+                  font-size: 18px;
+                  }
+                  nav .fa{
+                  display: block;
+                  color:white;
+                  margin: 10px;
+                  font-size: 22px;
+                  cursor: pointer;
+                  }
+                  .nav-links ul{
+                  padding: 30px;}
+                  .for i{
+                  position: absolute;
+                  top:8%;
+                  right: 30px;
+                  font-size: 20px;
+                  transform: translateY(-50%);
+                  }
+                  input{
+                  width:80%;
+                  height: 30px;
+                  font-size: 16px;
+                  }
+                   textarea{
+                  font-size: 16px;
+                  }
+                   .btn{
+                  font-size: 15px;
+                  width: 80%;
+                  padding: 5px;
+                  }
+                   textarea{
+                  height: 80px;
+                  }}
+                  @media(min-width: 700px){
+  
+      
+                  .text-box{
+                    width:50%;
+                    color: #fff;
+                    position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: left;
+                    box-sizing: border-box;
+                    border: 1px transparent rgba(128,128,128);
+                    background-color: rgba(128,128,128,0.1);
+                    outline: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    }
+                    .textbox form h1{
+                    padding: 20px 0;
+                    }
+                  .text-box h1{
+                  color: #654321;
+                  font-family:'Ancient Greek', Helvetica, sans-serif;
+                  font-size: 30px;
+
+                  }
+                  
+                   .btn{
+                  padding: 10px 16px;
+                  font-size: 18px;
+                  }
+                  
+                  input{
+                  width:80%;
+                  height: 30px;
+                  font-size: 16px;
+                  }
+                  
+                   textarea{
+                  font-size: 16px;
+                  }
+                   .btn{
+                  font-size: 15px;
+                  width: 80%;
+                  padding: 5px;
+                  }
+                   textarea{
+                  height: 80px;
+                  }
+                  }
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <p>.</p>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">View cart</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Give your feedback</h1>
+        <!-- <form> -->
+        <div class="for">
+          <input type="text" id="fullName" name="fullName" placeholder="Full name" autocomplete="on" autofocus="">
+          <br><br>
+          <input type="email" id="email" name="email" placeholder="Email address" autocomplete="on" autofocus="">
+          <br><br>
+          <textarea name="Feedback" id="Feedback" placeholder="Enter your feedback here..." cols="20" rows="5"></textarea>
+          <br><br>
+          <button type="submit" class="btn" onclick="openpopup()">
+            Submit
+          </button>
+          <div class="popup" id="Popup">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEVDoEf///9An0QxmjY7nT8nly0wmjU0mzk5nT4rmDGMwI72+vbd7N5MpFC+2r/I4MldqmDs9Ox7uH2ax5yiy6NqsG2w07Hk7+S11baVxZdNpFHX6NiLwI2Cu4S72LxHoktVp1lztHVcql/G38dusnGpz6ugUNjWAAALr0lEQVR4nO2dV2OjOhCFjRAIbBMT18SO2836///Fi+NgmsqMKtnNecrDFr4gZiSd0WgS/e2ahH4A5/ol/Pn6Jfz5+iW0odfD53b1sdyU+wnNWEYn+3Kz/FhtPw+vHv53t4Tzl9X1nOcxq7goIWTyUPUTrVhZnOfn6+o0d/oMzgh3p+klSVn2xOKLkIylyX562rl6ECeEu7clSxmVs3U4afXnl29OKO0THt4nOaNguEaU5ZP3hfXnsUy4OMYx4t0N32UcHy1D2iQ8TFms8/J6rzJmHweLT2WNcHYrUnO8b8i0uM1sPZglwvkxZ/qDcyiSJUdLScQK4aLMbb2+RjQvrXyRFghfitTm62tE0uJlBIQv59gN3xdjfDZmNCRcFA75HoyF4Vg1IpyXjsZnhzEtjWKOAeHsmLjn+2JMjga5Q59w6yB+ikTzrXfC+YV547uLXXSHqibhytMAbUSSlUfCXeH3BT7ECq3VlQ7h2vsLfIgkay+EszLEC3woLvFBFU140Frd2hJl6IUVlnCdBOS7Cz1SkYTXODBgNVKvDglnRRaar1JWoD5GDOHc6iJXX4Rhsj+CcBEoSQxFEsR6A064DR1j2krg81Qw4ToPTdVRDg6pUML3NDRTT+m7XcLp2AArxKlNwhECghFBhKMbog/BBiqEcD1OwAoREm4AhNtxRdG2IJsbasLFmPJgX4DUryScjxmwQlRO4FSEs5HMRUUiTDUNVxEW4wasEAszwusYlktyZVcTwnX4Ba9asTxnSAkPY4gymfI7SaR7NzLCWbhNtUb59qJElEYbGWEZclftW9VCcHZWIdJSj3A9gleY3+5jaaJClH2KYsLdCD7C73XuTFE6Vr1q8Ya/mHAEmTCtzZhXVRWSJCsKCVfhx2hrdfSqiqhM6EyJCEcwHY3bK9xX1exROE5FhOoQ7Vrso/NAO0VJBLngCLfBxyg79h5pp1imMsFakU84C77oZcvBQ80VD5Xz8z6f8Bg613MAlbGB9t+6hDB4mBGsFxTzZP5qmEtYBg4z2YYLqEIk3Mkbj3AReG9NCKjaNEp5uzY8wsCzGek8WorIndlwCF/CLnvpfxLA6ulkiDGnkpFDqFysOBUVZe5aJwkiOUMIw75CulcARtGbBJHzEoeEQb9C5c7ZXRKvlvP3B4RBAyk5g4oQbuLZzTCcDghD5kIyAVZZiA3pYU7sE6omfy5FCLiMZCUcaXl/YtMnDDgjJRRxHFFoaQ5mpz3CgIsKkqHOW05FIb+/xOgR3oLt4hOGPFD6IXhUdpMSBksVJEWXxwq2IfoJo0t4CJYqcjTgu2gbIu1u8ncJp6HizCACKiWOprRbo9ElDLU7o3Zy+5KVaDEx4SLQlFRuHvEkmdVUk9POvKZDGCgZ4gHlVYTdlNghDPMKMaWUD8lWF3fFIsIwgzT5xALKVohfituDok34HmKQJugDhtJV/pdouxysTai06RwoOWEBARVMpEPV/KjaNneh5M0BYHf+0CJ8858NEcXM34IVT7DWL65FuPT+Gea3IYINwAltmQItQu+vEF6rXQtsN7SmNQ3hzvesO0UfKIRvQLRWKg3hyfM7BJeit94BONizJkQ3hJ7XFTGwEL0FiDgY31pfNIR7r9mw52EDpHTy22p53g2hV89w4GGrAdX1bW0lQ8K5z0DDtXilmiH7+qTPFeeT0GegYVc0oLIqqv9fPEPNk3Dlb5dNVfPKAURPmbNnKnoSXr0FGonFKwLEG37k+Vt8EnpzDfGAOmG+cRKfhL4WFlIPWwCok6nzPuGrHiHBtqdReNg8XbSmInm9hV4THrR2MLLNKy7IKT3soTQrlZ87GTXhp06yuI84VCYGeNgDQM0Yz+rtn5pQp1TvMeIQsymQh93VRjeJPQv5akKNdFiPOPCMGOhht/VHO0s/E2JN+IEe7c0nBdzgAXvYjQyO7DxXFzUheguj/UmBVqYID7vW0mAm+dzIqAk32KjfiRmA3QWUh20OOCH1xKImRJZgkF5vCuUOEdrijaKj0VrgWZRRE+ImRsOYoUDUAPww8xhIPchqQtzf5gRFedFgjLd4jU2UHiEm0PCD4qekFgtv0psfkKc9QkRYFgVFsWNi08MGK+sRwr9qQkVRX+R64R1QG21G6k1h9DuURX2+c2nZw4aq/w6h36G8connPuMtXjudcPrfIRRQEfWHv337HjZUPUJYPlSntf4XhPew1RYvSIN8CJrTQNJaNwq68LCBhP05DWReCktr7UyG97AlWRVJ2J+XAtYW0Lzd1EU68rBBGqwtAOtDcN7++E6u+MaxFhsADNaH6jU+YmLyWBU487BBGqzxlfs0qLx9X9k59LAhGuzTqPbakBOTK3PpYYMI+3ttiv1SdNvQjUsPG6LBfql8z5vg9znRgJabuw/2vBW+hXNElIcNIqz/Zaj3pLEdjwLEedhqcbwnlX/oFBHrYQMIrwNCZULUcI3AgFgPWy2OB6z28TO88wcEdFD2yfHxAbUYGu4tCNCF/cypxYDU02R/XBBqWbwqceppQL0+8GUiaulZvApxa6JAdW34Up8ggPy6NljJEL5cSy5H3ba4tYnA+lK7iLoetkrc+lLopnCMrioUS9vDVolbIww2SWP0skEkfQ9bIUGdN7hWH1/dy5e7tpOCWn34eQtQ/16ljCxeuQTnLRBnZvA7FEOZWbxSic7MYM494XeZPAKKzz1hzq7hT7t0ZehhyyU8u4Y6f4jf7W3L3MOWSXj+EHeGFG9JtACdFpVLzpDijljibaVaFjxsmSTngJFHn/DW4EOur8qQnOXGnpvRQ7TiYUskPY+P7amAt+g93OYi7amA7ouBR7TlYQsl74sR3bB5GFsqY8viFUvR2wTfnwaHaM3ilTyQvD8Nvq0CqqLLw00Sqh5DGhYXoirPx1UZyj5RGr2+wJWVPprYq3t96fRrA3Z48tKlH9CvTaeRkriYryUvbV8hPfe0+iYCqtT9NIID9U3UOsWmPGlg2cMWPQao96Ve88t+aXsf0PEF5d8C9i/Va2kmPdJk3cPmC9qDVrP9pcQktu5hCwTuI6zZ/1KIaN/D5gveC1o3sAt8cAceNl+Ift66Tb+4PrgLD5srTE927RaYHB/ciYfNVYrpq699N8LQB3fiYfOEuxtB/36Lvg/uxuLlCHu/hf49Ol0f3Bsg/o4S/Xtm2iaxvxuj8PfMGDRrbRBdedhD6dwVZHDfU90+yJmHPZTWfU/RTds9efjgzjxszn8oMfskhNFG+yu6++BXfw1vqKwcTUZocHdeunbpgPalfXeeyc5K5rFzmP79h//AHZYuC0KsyeweUt9d3DSkrLFXEf799wGHv91KLvM7nf+Be7mj6C34NXNC5YCSFwBhtA58h5dQoPo6CKHj8hdtwWokQYTjRExhHVBhhGNEBAJCCceHCC7jhRI6L2RCCl7hCiZ0XwiDEaIyEk5Ypf6xTOAIptwMQRjNRzJHJQxTw4MhjGb7MSymsj2q8RuKsFovhl8Sx1fcIyMJo3XoeJNgjwlgCaMDC3kbMkU3BsATRrNNuJEab9C9FzUIo+gWKG2QROeUhw5htNuHuNyLFei+dtqEUbTy/hpJgm4lYkQY7S5+XyO7aL1AA8Io2qb+girFtyuyQBjNjp6GKkmO+BBqg7CaqJYe6vFIWqIbS1ojrNYbe8cleSQuNE/mWCKMopezQ0YSnw3Oj1kirBgLR2OVpIUxnxXCaqyWuf24SvPScHw+ZIWwijnH3OrymLD8aBRfGlkirHLHrbCWIGla3AzyQ1fWCCsdpiw2h6Qxm2ociRPKJmGlxTGODeplCY3jo5Wvr5FlwkqH90mutUqmLJ+8W8aLXBBW2r0tWcoQ75LQ6s8v33Qn11I5Ibxrd5pekpRlihJoQjKWJpfpyQndXc4IvzR/WV3PeR4zllFKnrDVT5RmjMV5fr6uTpbSgkBuCR96PXxuV9PlptxPKq6MTvblZjldbT8P6OsENOSDMKx+CX++fgl/vn4Jf77+B78gqzhQHrc8AAAAAElFTkSuQmCC" alt="">
+            <h2>Thank you!</h2>
+            <p>Your details has been successfully submitted Thanks!</p>
+            <button type="button" onclick="closepopup()">OK</button>
+          </div>
+          <br><br>
+        </div>
+        <!-- </form>  -->
+      </div>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+      let PopuP = document.getElementById("Popup");
+
+      function openpopup() {
+        PopuP.classList.add("open-popup");
+      }
+      function closepopup() {
+        PopuP.classList.remove("open-popup");
+      }
+    </script>
+  
+
+</body></html>
